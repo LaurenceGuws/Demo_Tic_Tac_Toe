@@ -10,8 +10,8 @@ public class TheGame {
 
 	public static void main(String[] args) {
 	    scan = new Scanner(System.in);
-		getFirstPlayer();
-		
+		//getFirstPlayer();
+		whoStarts = 1;
 		new MainFrame(whoStarts);
 		// Closing Scanner after the use
         scan.close();
