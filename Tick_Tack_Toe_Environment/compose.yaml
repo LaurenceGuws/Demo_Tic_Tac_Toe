@@ -2,9 +2,19 @@ version: '3'
 services:
   Tic_Tack_Toe:
     image: alpine:latest
+    volumes:
+      - C:\Repos\Demo_Tic_Tac_Toe\Tick_Tack_Toe_Environment\Volumes\YourJar.jar:/YourJar.jar
     command: >
       /bin/sh -c "
         apk update &&
         apk add openjdk17-jre &&
-        java -version
-      "cd 
+        java -version &&
+        java -jar /YourJar.jar &&
+        tail -F anything
+      "
+
+# An X server cannot be added directly to a docker-compose.yml file as it is a separate program that needs to be installed and run on your local 
+# PC or another machine on your network.
+# You can install an X server on your local PC by following the instructions for your operating system. 
+# Once the X server is installed and running, you can set the DISPLAY environment variable in your docker-compose.yml file to point to the address 
+# of the X server.
