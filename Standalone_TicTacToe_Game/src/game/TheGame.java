@@ -18,6 +18,8 @@ public class TheGame {
 	}
 	
 	// Gets the first played X or O
+	
+	// !!! check alpha characters
 	private static void getFirstPlayer() {
 		try {
 			System.out.println("Who is first: ");
