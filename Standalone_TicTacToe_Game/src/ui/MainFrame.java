@@ -419,7 +419,7 @@ public class MainFrame extends JFrame{
 		 * -X-
 		 * --X
 		 */
-		if(currentGrid[0][0] == 1 && currentGrid[1][1] == 1 && currentGrid[2][2] == 1) {
+		if(currentGrid[0][0] == 0 && currentGrid[1][1] == 0 && currentGrid[2][2] == 0) {
 			return true;
 		}
 		
@@ -429,7 +429,7 @@ public class MainFrame extends JFrame{
 		 * -O-
 		 * --O
 		 */
-		if(currentGrid[0][0] == 0 && currentGrid[1][1] == 0 && currentGrid[2][2] == 0) {
+		if(currentGrid[0][0] == 1 && currentGrid[1][1] == 1 && currentGrid[2][2] == 1) {
 			return true;
 		}
 		
@@ -438,16 +438,6 @@ public class MainFrame extends JFrame{
 		 * --X
 		 * -X-
 		 * X--
-		 */
-		if(currentGrid[2][0] == 1 && currentGrid[1][1] == 1 && currentGrid[0][2] == 1) {
-			return true;
-		}
-		
-		
-		/*
-		 * --O
-		 * -O-
-		 * O--
 		 */
 		if(currentGrid[2][0] == 0 && currentGrid[1][1] == 0 && currentGrid[0][2] == 0) {
 			return true;
@@ -455,19 +445,19 @@ public class MainFrame extends JFrame{
 		
 		
 		/*
-		 * X--
-		 * X--
-		 * X--
+		 * --O
+		 * -O-
+		 * O--
 		 */
-		if(currentGrid[0][0] == 1 && currentGrid[1][0] == 1 && currentGrid[2][0] == 1) {
+		if(currentGrid[2][0] == 1 && currentGrid[1][1] == 1 && currentGrid[0][2] == 1) {
 			return true;
 		}
 		
 		
 		/*
-		 * O--
-		 * O--
-		 * O--
+		 * X--
+		 * X--
+		 * X--
 		 */
 		if(currentGrid[0][0] == 0 && currentGrid[1][0] == 0 && currentGrid[2][0] == 0) {
 			return true;
@@ -475,11 +465,20 @@ public class MainFrame extends JFrame{
 		
 		
 		/*
-		 * -X-
-		 * -X-
-		 * -X-
+		 * O--
+		 * O--
+		 * O--
 		 */
-		if(currentGrid[1][0] == 1 && currentGrid[1][1] == 1 && currentGrid[1][2] == 1) {
+		if(currentGrid[0][0] == 1 && currentGrid[1][0] == 1 && currentGrid[2][0] == 1) {
+			return true;
+		}
+		
+		/*
+		 * -x-
+		 * -x-
+		 * -x-
+		 */
+		if(currentGrid[0][1] == 0 && currentGrid[1][1] == 0 && currentGrid[2][1] == 0) {
 			return true;
 		}
 		
@@ -489,7 +488,7 @@ public class MainFrame extends JFrame{
 		 * -O-
 		 * -O-
 		 */
-		if(currentGrid[1][0] == 0 && currentGrid[1][1] == 0 && currentGrid[1][2] == 0) {
+		if(currentGrid[0][1] == 1 && currentGrid[1][1] == 1 && currentGrid[2][1] == 1) {
 			return true;
 		}
 		
@@ -499,7 +498,7 @@ public class MainFrame extends JFrame{
 		 * --X
 		 * --X
 		 */
-		if(currentGrid[2][0] == 1 && currentGrid[2][1] == 1 && currentGrid[2][2] == 1) {
+		if(currentGrid[0][2] == 0 && currentGrid[1][2] == 0 && currentGrid[2][2] == 0) {
 			return true;
 		}
 		
@@ -509,23 +508,13 @@ public class MainFrame extends JFrame{
 		 * --O
 		 * --O
 		 */
-		if(currentGrid[2][0] == 0 && currentGrid[2][1] == 0 && currentGrid[2][2] == 0) {
+		if(currentGrid[0][2] == 1 && currentGrid[1][2] == 1 && currentGrid[2][2] == 1) {
 			return true;
 		}
-		
+
 		
 		/*
 		 * xxx 
-		 * ---
-		 * ---
-		 */
-		if(currentGrid[0][0] == 1 && currentGrid[0][1] == 1 && currentGrid[0][2] == 1) {
-			return true;
-		}
-		
-		
-		/*
-		 * OOO
 		 * ---
 		 * ---
 		 */
@@ -535,11 +524,21 @@ public class MainFrame extends JFrame{
 		
 		
 		/*
+		 * OOO
+		 * ---
+		 * ---
+		 */
+		if(currentGrid[0][0] == 1 && currentGrid[0][1] == 1 && currentGrid[0][2] == 1) {
+			return true;
+		}
+		
+
+		/*
 		 * ---
 		 * xxx
 		 * ---
 		 */
-		if(currentGrid[0][1] == 1 && currentGrid[1][1] == 1 && currentGrid[2][1] == 1) {
+		if(currentGrid[1][0] == 0 && currentGrid[1][1] == 0 && currentGrid[1][2] == 0) {
 			return true;
 		}
 		
@@ -549,7 +548,7 @@ public class MainFrame extends JFrame{
 		 * OOO
 		 * ---
 		 */
-		if(currentGrid[0][1] == 0 && currentGrid[1][1] == 0 && currentGrid[2][1] == 0) {
+		if(currentGrid[1][0] == 1 && currentGrid[1][1] == 1 && currentGrid[1][2] == 1) {
 			return true;
 		}
 		
@@ -559,7 +558,7 @@ public class MainFrame extends JFrame{
 		 * ---
 		 * xxx
 		 */
-		if(currentGrid[0][2] == 1 && currentGrid[1][2] == 1 && currentGrid[2][2] == 1) {
+		if(currentGrid[2][0] == 0 && currentGrid[2][1] == 0 && currentGrid[2][2] == 0) {
 			return true;
 		}
 		
@@ -569,9 +568,10 @@ public class MainFrame extends JFrame{
 		 * ---
 		 * OOO
 		 */
-		if(currentGrid[0][2] == 1 && currentGrid[1][2] == 1 && currentGrid[2][2] == 1) {
+		if(currentGrid[2][0] == 1 && currentGrid[2][1] == 1 && currentGrid[2][2] == 1) {
 			return true;
 		}
+		
 		return false;
 	}
 }
