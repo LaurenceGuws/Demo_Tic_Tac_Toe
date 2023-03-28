@@ -9,30 +9,27 @@ public class TheGame {
 	private static int whoStarts; // 1 = X, 2 = O
 
 	public static void main(String[] args) {
-	    scan = new Scanner(System.in);
-		//getFirstPlayer();
-		whoStarts = 1;
+		scan = new Scanner(System.in);
+		getFirstPlayer();
+		//whoStarts = 1;
 		new MainFrame(whoStarts);
 		// Closing Scanner after the use
-        scan.close();
+		scan.close();
 	}
 	
 	// Gets the first played X or O
-	
-	// !!! check alpha characters
 	private static void getFirstPlayer() {
 		try {
 			System.out.println("Who is first: ");
 			System.out.println("1. X");
 			System.out.println("2. O");
-
-			// This method reads the number provided using keyboard
-			whoStarts = scan.nextInt();
-        
 			
+			// This method reads the number provided using keyboard
+			whoStarts = Integer.parseInt(scan.next());
 		}catch(Exception e) {
 			whoStarts = 3;
 		}finally {
+			
 			if(whoStarts != 1 && whoStarts != 2) {
 				System.out.println("Please enter either \"0\" or \"1\"");
 				getFirstPlayer();
