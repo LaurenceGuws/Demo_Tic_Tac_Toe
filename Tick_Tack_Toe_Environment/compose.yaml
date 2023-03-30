@@ -3,16 +3,18 @@ services:
   Tic_Tack_Toe:
     image: alpine:latest
     container_name: Tic_Tack_Toe
+    # environment:
+    #   - GITHUB_TOKEN=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
     volumes:
       - C:\Repos\Demo_Tic_Tac_Toe\Tick_Tack_Toe_Environment\Volumes\RunHello.jar:/RunHello.jar
-    command: >
-      /bin/sh -c "
-        apk update &&
-        apk add openjdk17-jre &&
-        java -version &&
-        java -jar /RunHello.jar &&
-        tail -F anything
-      "
+    command: > 
+      /bin/sh -c " 
+      apk update && 
+      apk add openjdk17-jre && 
+      java -version && 
+      apk add git && 
+      git clone https://github.com/LaurenceGuws/Demo_Tic_Tac_Toe.git && 
+      tail -F anythingg "
 
   Bot1:
     image: alpine:latest
