@@ -9,25 +9,7 @@ services:
       - C:/Repos/Demo_Tic_Tac_Toe/Tick_Tack_Toe_Environment/Testing/Volumes/tomcat-users.xml:/myfile/tomcat-users.xml
       - C:/Repos/Demo_Tic_Tac_Toe/Tick_Tack_Toe_Environment/Testing/Volumes/context.xml:/myfile/context.xml
       - C:/Repos/Demo_Tic_Tac_Toe/Tick_Tack_Toe_Environment/Testing/HelloWorldOnServer.war:/myfile/HelloWorldOnServer.war
-      - C:/Repos/Demo_Tic_Tac_Toe/Tick_Tack_Toe_Environment/Testing/Volumes/background.gif:/myfile/<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Background GIF</title>
-<style>
-    body {
-        background-image: url('background.gif');
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-</style>
-</head>
-<body>
-    <h1>My JSP page with a GIF in the background</h1>
-</body>
-</html>
-  
+      - C:/Repos/Demo_Tic_Tac_Toe/Tick_Tack_Toe_Environment/Testing/Volumes/background.gif:/myfile/background.gif
 
     command: >
       /bin/sh -c "
