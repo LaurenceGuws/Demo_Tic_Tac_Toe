@@ -8,6 +8,27 @@ services:
     volumes:
       - C:/Repos/Demo_Tic_Tac_Toe/Tick_Tack_Toe_Environment/Testing/Volumes/tomcat-users.xml:/myfile/tomcat-users.xml
       - C:/Repos/Demo_Tic_Tac_Toe/Tick_Tack_Toe_Environment/Testing/Volumes/context.xml:/myfile/context.xml
+      - C:/Repos/Demo_Tic_Tac_Toe/Tick_Tack_Toe_Environment/Testing/HelloWorldOnServer.war:/myfile/HelloWorldOnServer.war
+      - C:/Repos/Demo_Tic_Tac_Toe/Tick_Tack_Toe_Environment/Testing/Volumes/background.gif:/myfile/<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Background GIF</title>
+<style>
+    body {
+        background-image: url('background.gif');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+</head>
+<body>
+    <h1>My JSP page with a GIF in the background</h1>
+</body>
+</html>
+  
+
     command: >
       /bin/sh -c "
         apk update &&
@@ -19,12 +40,14 @@ services:
         tar xvzf apache-tomcat-10.0.0.tar.gz --strip-components 1 --directory /opt/tomcat &&
         cp /myfile/tomcat-users.xml opt/tomcat/conf/ &&
         cp myfile/context.xml opt/tomcat/webapps/manager/META-INF/ &&
+        cp myfile/HelloWorldOnServer.war opt/tomcat/webapps/ &&
         cd /opt/tomcat/bin &&
         chmod +x startup.sh &&
         ./startup.sh &&
         tail -F anything
       "
   Bot1:
+    
     image: alpine:latest
     container_name: Bot1
     command: >
@@ -44,4 +67,3 @@ services:
         java -version &&
         tail -F anything
       "
-    
