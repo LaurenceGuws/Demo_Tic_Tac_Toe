@@ -6,10 +6,10 @@ services:
     ports:
       - 8080:8080
     volumes:
-      - C:/Repos/Demo_Tic_Tac_Toe/Tick_Tack_Toe_Environment/Testing/Volumes/tomcat-users.xml:/myfile/tomcat-users.xml
-      - C:/Repos/Demo_Tic_Tac_Toe/Tick_Tack_Toe_Environment/Testing/Volumes/context.xml:/myfile/context.xml
-      - C:/Repos/Demo_Tic_Tac_Toe/Tick_Tack_Toe_Environment/Testing/HelloWorldOnServer.war:/myfile/HelloWorldOnServer.war
-      - C:/Repos/Demo_Tic_Tac_Toe/Tick_Tack_Toe_Environment/Testing/Volumes/background.gif:/myfile/background.gif
+      - C:/Repos/Demo_Tic_Tac_Toe/Tick_Tack_Toe_Environment/Testing/Volumes/TomcatConfig/tomcat-users.xml:/myfile/tomcat-users.xml
+      - C:/Repos/Demo_Tic_Tac_Toe/Tick_Tack_Toe_Environment/Testing/Volumes/TomcatConfig/context.xml:/myfile/context.xml
+      - C:/Repos/Demo_Tic_Tac_Toe/Tick_Tack_Toe_Environment/Testing/Volumes/BasicJspProject/HelloWorldOnServer.war:/myfile/HelloWorldOnServer.war
+      - C:/Repos/Demo_Tic_Tac_Toe/Tick_Tack_Toe_Environment/Testing/Volumes/BasicJspProject/background.gif:/myfile/background.gif
 
     command: >
       /bin/sh -c "
